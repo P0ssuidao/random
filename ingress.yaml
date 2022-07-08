@@ -1,0 +1,17 @@
+kind: Ingress
+metadata:
+  name: web-ingress-prod
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: ingress
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: web-service
+            port:
+              number: 3000
+        path: /
+        pathType: Exact
