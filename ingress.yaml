@@ -11,7 +11,7 @@ spec:
       paths:
       - backend:
           service:
-            name: web-service
+            name: web-service-develop
             port:
               number: 3000
         path: /

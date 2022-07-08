@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: web-production
+  name: web-production
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-production
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: web-productioon
+    spec:
+      containers:
+      - image: p0ssuidao/devops-games:v1
+        name: devops-games
+        ports:
+        - containerPort: 80
+        resources: {}
