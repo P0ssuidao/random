@@ -5,9 +5,11 @@ metadata:
     run: nginx
   name: web-service
 spec:
+  type: NodePort
   ports:
   - port: 80
     protocol: TCP
     targetPort: 8080
+    nodePort: 30007
   selector:
     run: web-develop
